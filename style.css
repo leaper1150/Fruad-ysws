@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Phantom Sans";
+  src: url("https://hackclub.com/font/PhantomSans0.8-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Phantom Sans";
+  src: url("https://hackclub.com/font/PhantomSans0.8-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --hc-red: #ec3750;
+  --hc-cyan: #33d6a6;
+  --hc-blue: #338eda;
+  --hc-purple: #8492e6;
+  --hc-yellow: #f1c40f;
+  
+  --bg-color: #f6f6f6;
+  --text-color: #1f2d3d;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Phantom Sans", "Outfit", system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Hack Club Flag in corner */
+.flag-banner {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 120px;
+  z-index: 100;
+}
+
+.flag-banner img {
+  width: 100%;
+}
+
+header {
+  background: linear-gradient(135deg, #ff8c37, #ec3750);
+  color: white;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.header-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.card-image {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.card-image h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.bg-red { background: linear-gradient(135deg, #ec3750, #ff8c37); }
+.bg-blue { background: linear-gradient(135deg, #338eda, #33d6a6); }
+
+.card-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--hc-red);
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.card-content strong {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.scam-btn {
+  background-color: var(--hc-red);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.scam-btn:hover {
+  background-color: #d12a41;
+  transform: scale(1.02);
+}
+
+.scam-btn:active {
+  transform: scale(0.98);
+}
+
+footer {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  margin-top: 4rem;
+  font-family: "Outfit", sans-serif;
+}
